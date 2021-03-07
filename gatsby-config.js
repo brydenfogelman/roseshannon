@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "roseshannon.com",
+    title: "Rose Shannon",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -16,10 +16,17 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.ico",
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/MDXLayout.js"),
+        },
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
