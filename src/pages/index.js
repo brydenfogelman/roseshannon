@@ -11,8 +11,8 @@ const Home = () => {
         <Col span={12}>
           <Description>
             <>
-              I’m Rose. I’m a strategist and designer living in San Francisco,
-              California.
+              I’m Rose. I’m a product designer living in Vancouver,
+              British Columbia.
               <br />
               <br />I like to do a lot of stuff and I use this website as my
               highlight reel, so feel free to peruse.
