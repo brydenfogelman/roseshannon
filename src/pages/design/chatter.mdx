@@ -50,7 +50,7 @@ trying to find adequate care.
 
 <Section title="Process">
 I followed a standard Design Thinking approach to this project and split my project into 4 phases: Discovery, Definition, Design, and Delivery.
-<Image src="Process.png" />
+<Image src="chatter_process.png" />
 
 </Section>
 
@@ -149,15 +149,11 @@ mental illness.
 <br />
 
 ## Personas
-xxx
 <Image src="personas_chat.png" />
 
 
 ## Use Cases
-Symptom reduction
-Treatment augmentation
-Mood improvement
-Progress Tracking
+<Image src="Use Cases.png" />
 <br />
 
 ## Executive Summary
@@ -176,34 +172,39 @@ treatment based in CBT.
 What are important flows that need to be considered?
 
 
-**Chat Onboarding** - The user needs to be introduced and onboarded to both the application and the chat. I thought being onboarded through a conversation with the chatbot was the best way for the user to get acquainted with the way the rest of the app would be navigated. So through the chatbot, the user learns of the purpose of the app, sets check-in reminders, enables notifications, and completes their anxiety/depression assessments. 
+**Chat Onboarding** - The user needs to be introduced and onboarded to both the application and the chat. I thought being onboarded through a conversation with the chatbot was the best way for the user to get acquainted with the way the rest of the app would be navigated. 
+
+So through the chatbot, the user learns of the purpose of the app, sets check-in reminders, enables notifications, and completes their anxiety/depression assessments. 
 <Image src="chat_onboarding.png" />
 
 
 
-**Strategies** - Then, once a user has received their physical card, **how might they activate it in app**?
+**Strategies** - There are a couple ways for the user to be introduced to Strategies. One is while they chat with the chatbot, they are recommended a CBT strategy based on their responses and what exercises they have previously completed. Users can also navigate away from the chatbot and navigate to the Browse page where they can search through all available Strategies. However, regardless of how they arrive at a Strategy exercise, **Strategies are completed through the chat itself**. 
 
-A user would need to be provided with a unique ID with their physical card sent to their address. The user would then confirm that ID in-app in order to activate their physical card.
+I did this because I wanted the chat function to be the center of the application. I wanted the user to be connected to the chat while they exercise and improve their coping strategies so that Chatter and the chatbot can feel like a valuable tool for them. 
 <Image src="Complete a Strategy.png" />
 
-
-**Navigate to Strategies** - After making purchases, we can think about how a user would want to **interact with transactions and what information they would want to know**. Based off of user interviews, it is important for users to be able to view the time and date of transactions, the amount, and the vendor. For the purpose of rewards, each transaction would have a corresponding cash back percentage that the user received.
 <Image src="Explore Strategies.png" />
 
 
-**Contacting a Professional** - How might a user **set up an investment or high-interest savings account**? For investing, again a user would need to start with opening an account. However, we would then need to take them through a flow of determining what kind of account is right for them, determining their investment strategy based upon their risk score, and then determining their portfolio allocation. I decided to create a questionairre that helped align the portfolio allocation to the users'issues that most impact them.  
+**Contacting a Professional** - Regardless of the efficacy of the Chatter application, there will be cases when users need outside help. I wanted it to be easy for users to be able to locate and contact professionals within the app. For this I thought it would be best if, in the Onboarding stage, the user linked their GP portal account, therefore if they needed to reach out to their doctor, they could easily click into their Profile and select their Doctor Portal to be redirected. 
+
+If a user wants to instead reach counselling, I wanted to include navigation to locating local counselling help by using geolocating withing the app. Then users could identify couselling or therapist services near them and contact them more easily.
+
+I also designed an SOS feature. Within the chat itself, if a user feels the need to send an 'SOS', the chatbot will contact their doctor through the Doctor Portal. This will notify the GP to get in touch with the user. 
 <Image src="Get in Touch with GP.png" />
 
 </Section>
 
-
+<br />
+<br />
 
 
 <Section >
 
 
 ## Wireframes
-I focused on sketching out the onboarding flow and the flow for opening an investment account. I made sure the logic of these flows were sound before proceeding to final designs. 
+I focused on sketching out the main layouts of the Chat frames as how users would interact with the Strategies from the Chat. This layout evolved as I went onto design the high-fidelity mockups because I wanted to integrate the Strategies into the Chat more and make the Strategy exercises more conversational rather than have them take the user to a different frame. 
 <Image src="chat_wireframes.png" />
 
 </Section>
@@ -238,7 +239,9 @@ rest of the app branding.
 
 
 ## High Fidelity Mocks
-**Chat Onboarding** - xxx
+**Chat Onboarding** - The onboarding flow takes the user through the regular sign up process but also notifes the user of important information like how Chatter is intended to **augment** their treatment. As indicated in the Chat Onboarding User Flow, how Chatter works and how the user is recommended Strategies is told to the user through the chat itself. The user is provided some predetermined responses to ease through this initial section. 
+
+After chat onboarding, the user is asked by the chatbot how they would like to start, with a **symptom assessment or with open chat**. 
 
 
 <Image src="chat_onboard 1.png" />
@@ -246,17 +249,21 @@ rest of the app branding.
 <Image src="chat_onboard 3.png" />
 <Image src="chat_onboard 4.png" />
 
-**Strategy Exercise** - xxx
+**Strategy Exercise** - Users complete Strategy exercises with guidance of the chatbot. This mock flow shows the user being recommended a visualization exercise and then completing a gratitude journaling exercise. The chatbot first recommends the visualization exercise, explains what the exercise is and how it works at the request of the user, but then suggests the gratitude journaling exercise when the user opts out of the visualization exercise. 
+
+This flow shows how the user can interact with the chatbot to not only complete different exercises but also to agree to or to turn down suggestions of the chatbot. The mocks also show how the user can navigate to the Visualization strategy page, be redirected to the Chat, and begin the exercise.
 
 
 <Image src="chat_strategy.png" />
 <Image src="viz_chat.png" />
 
-**Navigating to Strategies** - xxx
+**Navigating to Strategies** - Users are able to navigate away from the main Chat page, scroll through their summary page, and navigate to Browse. They can look through the available Strategy exercises on this page. 
 
 <Image src="browse_strat.png" />
 
-**Contacting a Professional** - xxx.
+**Contacting a Professional** - From the main Chat page, users can click-into their Profile on the top-right. They can then access their Doctor Portal which will then either open the native application if it is downloaded on their phone or it will open up their browser.
+
+If the user chooses to instead search for resources, they can select to search for couselling services near them which would open a local, interactive map showing locations of clinic, therapist, and couselling services, with a list of these services beneath. 
 
 <Image src="contact_prof.png" />
 
