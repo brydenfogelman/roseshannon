@@ -7,11 +7,11 @@ import { graphql, useStaticQuery } from "gatsby";
 const Wrapper = styled.div`
   .image-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 1rem;
 
     .image:not(:last-child) {
-      margin-right: 2rem;
+      margin-right: 6rem;
     }
 
     img {

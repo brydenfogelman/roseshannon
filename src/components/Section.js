@@ -5,10 +5,10 @@ export const Section = ({ title, children }) => {
   return (
     <div className="block">
       <Row>
-        <Col span={8}>
+        <Col span={4}>
           <h1>{title}</h1>
         </Col>
-        <Col span={16}>
+        <Col span={20}>
           {children}
         </Col>
       </Row>
