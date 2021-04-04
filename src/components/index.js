@@ -21,5 +21,6 @@ export const Description = styled.div`
 export const Nav = styled.div`
   ul {
     list-style: none;
+    padding: 0;
   }
 `;

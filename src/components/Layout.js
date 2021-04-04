@@ -33,14 +33,18 @@ export default function Layout({ children }) {
       <GlobalStyle />
       <Wrapper>
         <Row>
-          <Col offset={4} span={16}>
+          <Col
+            xs={{ offset: 1, span: 22 }}
+            md={{ offset: 4, span: 16 }}
+            lg={{ offset: 6, span: 12 }}
+          >
             <Row className={"top"} justify={"space-between"}>
-              <Col>
+              <Col xs={24} sm={12}>
                 <Link to={"/"}>
                   <Title> {data.site.siteMetadata.title}</Title>
                 </Link>
               </Col>
-              <Col>
+              <Col xs={24} sm={12}>
                 <Navigation />
               </Col>
             </Row>

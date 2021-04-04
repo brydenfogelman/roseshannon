@@ -9,7 +9,7 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <Row>
-        <Col span={12}>
+        <Col span={24}>
           <Description>
             <>
               I’m Rose. I’m a product designer living in Vancouver, British

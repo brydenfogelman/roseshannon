@@ -12,11 +12,14 @@ export const Wrapper = styled.div`
   display: flex;
   width: 10rem;
   justify-content: space-between;
-  // transition: all 0.3s ease-in-out;
   cursor: pointer;
 
   &:hover {
     color: ${({ theme }) => theme.primary};
+  }
+
+  @media only screen and (min-width: 576px) {
+    margin-left: auto;
   }
 `;
 
