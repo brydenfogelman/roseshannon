@@ -28,7 +28,10 @@ const Wrapper = styled.div`
 `;
 
 const getImageNodeFromData = (data, key) => {
-  return data.allFile.edges.filter(({ node }) => node.name === key)[0].node;
+  const image = data.allFile.edges.filter(({ node }) => node.name === key)[0];
+  if (image) {
+    return image.node;
+  }
 };
 
 const imageFileQuery = graphql`
