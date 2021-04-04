@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/roseshannon",
   siteMetadata: {
     title: "Rose Shannon",
-    siteUrl: "https://brydenfogelman.github.io/roseshannon/",
+    siteUrl: "https://roseshannon.com",
   },
   plugins: [
     "gatsby-plugin-styled-components",
