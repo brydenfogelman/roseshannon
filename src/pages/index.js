@@ -5,9 +5,7 @@ import { Description } from "../components";
 import { graphql } from "gatsby";
 import { ItemList } from "../components/ItemList";
 
-// markup
 const Home = ({ data }) => {
-  console.log(data.allMdx.edges);
   return (
     <Layout>
       <Row>

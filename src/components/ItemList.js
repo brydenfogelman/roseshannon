@@ -13,7 +13,6 @@ export const Container = styled.div`
 `;
 
 export const ItemList = ({ data }) => {
-  console.log(data);
   return (
     <Container>
       {data.map((item, index) => (
