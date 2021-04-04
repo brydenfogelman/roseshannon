@@ -6,10 +6,13 @@ import Layout from "./Layout";
 import { Description, Subheader } from "./index";
 
 const shortcodes = { Section, Image, Subheader, Description };
-export default ({ children }) => {
+
+const MDXLayout = ({ children }) => {
   return (
     <Layout>
       <MDXProvider components={shortcodes}>{children}</MDXProvider>
     </Layout>
   );
 };
+
+export default MDXLayout;

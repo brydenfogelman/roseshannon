@@ -4,6 +4,7 @@ import { useHover } from "../hooks/hover";
 import { Col, Row } from "antd";
 import { Subheader } from "./index";
 import { navigate } from "gatsby";
+import { Image } from "./Image";
 
 const Wrapper = styled.div`
   cursor: pointer;
@@ -24,7 +25,14 @@ const Wrapper = styled.div`
   }
 `;
 
-export const ItemTitle = ({ index, title, subheader, description, path }) => {
+export const ItemTitle = ({
+  index,
+  title,
+  subheader,
+  description,
+  path,
+  image,
+}) => {
   const [hoverRef, isHovered] = useHover();
 
   return (
@@ -34,13 +42,20 @@ export const ItemTitle = ({ index, title, subheader, description, path }) => {
       isHovered={isHovered}
       onClick={() => navigate(path)}
     >
+      {image && (
+        <Row>
+          <Col span={24}>
+            <Image src={image} />
+          </Col>
+        </Row>
+      )}
       <Row>
-        <Col span={3} offset={5}>
+        <Col span={3}>
           <div className="index">
             <h1>{`${index}`.padStart(2, "0")}</h1>
           </div>
         </Col>
-        <Col span={11}>
+        <Col span={21}>
           <div className="info">
             <h1>{title}</h1>
             <Subheader>{subheader}</Subheader>

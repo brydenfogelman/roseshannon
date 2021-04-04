@@ -1,6 +1,5 @@
 import React from "react";
 import { ItemTitle } from "./ItemTitle";
-import { get } from "lodash";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -12,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 export const Item = ({ index, data }) => {
-  const content = get(data, "content", []);
+  // const content = get(data, "content", []);
 
   return (
     <Wrapper>

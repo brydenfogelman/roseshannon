@@ -8,9 +8,7 @@ export const Section = ({ title, children }) => {
         <Col span={4}>
           <h1>{title}</h1>
         </Col>
-        <Col span={20}>
-          {children}
-        </Col>
+        <Col span={20}>{children}</Col>
       </Row>
     </div>
   );

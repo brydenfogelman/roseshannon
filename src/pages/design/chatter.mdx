@@ -4,6 +4,8 @@ subheader: October 2020 - Present
 description: Chatter, a mobile application focused on mental health wellness, offers users opportunity to interact with an artificial intelligence chatbot.
 path: /design/chatter
 date: 2019-01-29
+image: "cover_image_chat.png"
+order: 1
 ---
 
 <h1>{props.pageContext.frontmatter.title}</h1>
@@ -16,7 +18,7 @@ date: 2019-01-29
 
 <Section >
 
-<Image src="cover_image_chat.png" />
+<Image src={props.pageContext.frontmatter.description} />
 
 </Section>
 

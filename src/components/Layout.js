@@ -33,7 +33,7 @@ export default function Layout({ children }) {
       <GlobalStyle />
       <Wrapper>
         <Row>
-          <Col offset={3} span={16}>
+          <Col offset={4} span={16}>
             <Row className={"top"} justify={"space-between"}>
               <Col>
                 <Link to={"/"}>
@@ -51,5 +51,5 @@ export default function Layout({ children }) {
         </Row>
       </Wrapper>
     </ThemeProvider>
-  ); 
+  );
 }
