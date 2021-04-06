@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   pathPrefix: "/roseshannon",
   siteMetadata: {
@@ -46,6 +50,15 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: process.env.GA_ID,
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+      },
     },
   ],
 };
