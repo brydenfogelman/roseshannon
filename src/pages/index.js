@@ -12,7 +12,7 @@ const Home = ({ data }) => {
         <Col span={24}>
           <Description>
             <>
-              I’m Rose. I’m a product designer living in Vancouver, British
+              Hello! I’m Rose. I’m a product designer living in Vancouver, British
               Columbia.
               <br />
               <br />I like to do a lot of stuff and I use this website as my
