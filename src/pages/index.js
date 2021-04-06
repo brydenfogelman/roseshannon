@@ -23,11 +23,7 @@ const Home = ({ data }) => {
       </Row>
       <Row>
         <Col span={24}>
-          <ItemList
-            data={data.allMdx.edges.sort(
-              (a, b) => a.node.frontmatter.order < b.node.frontmatter.order
-            )}
-          />
+          <ItemList data={data.allMdx.edges} />
         </Col>
       </Row>
     </Layout>
@@ -36,7 +32,10 @@ const Home = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMdx(filter: { fileAbsolutePath: { regex: "/design/" } }) {
+    allMdx(
+      filter: { fileAbsolutePath: { regex: "/design/" } }
+      sort: { order: ASC, fields: frontmatter___order }
+    ) {
       edges {
         node {
           fileAbsolutePath
