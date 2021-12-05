@@ -1,0 +1,223 @@
+---
+title: "Imperfect Payments"
+subheader: October 2021 - January 2022
+description: XXX
+path: /design/imperfect-payments
+date: 2019-01-29
+image: "ipcover.png"
+order: 2
+---
+
+import video from "../../assets/videos/invoicecreate.mp4";
+
+<h1>{props.pageContext.frontmatter.title}</h1>
+<Subheader>{props.pageContext.frontmatter.subheader}</Subheader>
+<p>{props.pageContext.frontmatter.description}</p>
+
+
+<br />
+<br />
+
+<Section >
+
+<Image src="ipcover.png" />
+
+</Section>
+
+<Section title="Overview">
+
+## Summary
+Lack of an invoice deposit/prepayment feature requires painful workarounds in order for BOs to keep their 
+accounts receivable (A/R) and books accurate. If the cumbersome workflow is not followed, it can results in 
+inaccurate books. If users create invoices for deposits only (for service in the future), their sales 
+will be overstated.
+
+<br />
+<br />
+
+## Design Goal
+Enabling invoice prepayments empowers Wave Business Owners (BOs) to clearly indicate the deposit percentage, 
+amount, due date, and terms on an invoice. Recording payments for a prepayment is seamless whether recording 
+it manually, using Wave Payments or depositing a check via Wave Money. Wave automagically bookkeeps prepayment 
+transactions, tracks customer credit balances, and keeps users informed of how these transactions impact their 
+books and reports.
+
+</Section>
+<br />
+<br />
+
+<Section title="Process">
+I followed a standard Design Thinking approach to this project and split my project into 4 phases: Discovery, Definition, Design, and Delivery.
+<Image src="designprocessip.png" />
+
+</Section>
+
+<br />
+<br />
+
+<Section title="Discovery">
+
+
+## Contextual Analysis
+Deposits/prepayments can be booked correctly if a user follows the correct laborious steps outlined in a Wave Help Centre article.
+However, it requires painful workarounds and is not best best practice. There was opportunity to simplify this 
+for Wave users and help ensure compliant bookkeeping of deposit/prepayment transactions.
+
+<Image src="user-quotes.png" />
+
+
+<br />
+
+
+## Workflows
+## 1. Deposit/Prepayments on an Existing Invoice
+- This is the current problem we are solving for. From the data, we know that 30% of existing invoices receive a 
+partial payment.
+- In the case, the invoice is dated in the future and the deposit payment is received before the invoice date.
+
+ <br />
+
+**Payment workflows include:**
+- Invoicing - Manual invoice payment
+- Wave Payments
+- Wave Money - Check Deposits
+- Accounting Transactions
+
+
+<Image src="workflow1.png" />
+
+## 2. Customer Credit
+- This is the current problem we are solving for. From the data, we know that 30% of existing invoices receive a 
+partial payment.
+<br />
+- This is currently solved for via the Accounting > Transactions page. The missing functionality is associating a 
+deposit to a customer account in order to allow BOs to easily apply a deposit to an invoice (without having to create 
+separate account in the Chart of Accounts (CoAs) for each customer (which is not a good accounting practice).
+
+<Image src="workflow2.png" />
+
+<br />
+
+</Section>
+
+<br />
+<br />
+<Section title="Ideation">
+
+
+## Creating an Invoice
+
+The **Invoice Create** page needs to allow users the ability to create a deposit. From the perspective of the business owner, I want to be able to add
+a deposit to my invoice and indicate to my customer the amount they need to pay and when the deposit is due. 
+
+* As a BO, I want to add a deposit to my invoice. 
+* As a BO, I can indicate the desired deposit due date and deposit value (a percentage of the invoice total)
+* The deposit due date picker follows the same pattern as the Invoice due components
+<br />
+<br />
+
+<Image src="invoicecreate.png" />
+
+<video controls style="width: 100%;" autoplay loop >
+    <source src={video} type="video/mp4" />
+</video>
+
+We also want to give business owners the opportunity to save these deposit setting and apply them to all future invoice. I added the ability for these
+default settings to be changed in Business Settings in the sidebar menu. 
+
+
+
+<br />
+<br />
+
+
+## Sending an Invoice
+The BO needs to 
+* Addition of the insights box at the top of the page which shows the user their **deposit amount, deposit due, invoice total, and invoice total due**
+* Separated the dynamic amount owing for further clarification
+* Copy revision of reminder scheduling to make it clear that reminders will be scheduled after the due dates for both the **deposit** and the **invoice due date**
+<br />
+<br />
+<br />
+
+## Viewing an Invoice as a Customer
+As a customer, I need to understand from a quick glance that I owe a deposit 
+* Copy revision for greater clarification
+* Addition of **deposit requested** and **deposit due**
+ <br />
+
+<Image src="invoicesend.png" />
+
+<br />
+<br />
+
+## Viewing all Invoices
+**User Story** - As a BO, I can see the Deposit amount due and the status for the applicable invoices. This is so that I know how much is owing per invoice.
+--
+<Image src="invoicelist.png" />
+
+<br />
+<br />
+
+## Viewing your Payment History
+
+**User Story** -  Add customer credit to the summary banner. Include deposit amount and status in the invoice list table.
+<Image src="paymenthistory.png" />
+
+
+
+</Section>
+
+<Section title="Define">
+<br />
+
+## Design Principles
+
+<Image src="designprinciples.png" />
+
+## What will be prioritize for initial release
+
+
+</Section>
+
+<br />
+<br />
+
+<Section title="Design">
+
+## Final Design
+
+</Section>
+
+
+
+<br />
+<br />
+
+
+<Section title="User Test">
+
+
+## User Testing
+I ran two cohorts for user testing. The first cohort included 10 participants and primarily tested the usability of the **adding a deposit** feature and the new value concepts on the sending an invoice flow. 
+
+The second cohort included 5 participants. The second cohort primarily tested terminology and concept testing. The UX writer and I wanted to ensure that ...
+
+
+</Section>
+
+<br />
+<br />
+
+<Section title="Delivery">
+
+## Ship
+xxx. 
+
+
+
+
+<br />
+<br />
+
+</Section>

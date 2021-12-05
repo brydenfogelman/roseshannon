@@ -1,0 +1,243 @@
+---
+title: "Central Profile"
+subheader: July 2021 - December 2021
+description: Develop a single source of truth for profile information and data for users at Wave HQ. 
+path: /design/central-profile
+date: 2019-01-29
+image: "centralization-cover.png"
+order: 1
+---
+
+<h1>{props.pageContext.frontmatter.title}</h1>
+<Subheader>{props.pageContext.frontmatter.subheader}</Subheader>
+<p>{props.pageContext.frontmatter.description}</p>
+
+
+<br />
+<br />
+
+<Section >
+
+<Image src="centralization-cover.png" />
+
+</Section>
+
+<Section title="Overview">
+
+## Summary
+Each product in the Wave Apps ecosystem asks the same profile questions over and over again. At Wave, we don't 
+recognize the same user while they move through the ecosystem. We treat each customer as if it's their first time. 
+It's tedious and repetitive for the user and it causes us to have duplicative and redundant data. This data is difficult 
+to manage and hard to reconcile. It prevents us from having a smart system with context and personalization.
+
+<br />
+<br />
+
+## Design Goal
+Centralizating how Wave captures user information and data into a 'user profile'. Along with this, we also intend 
+to centralize how we expose data to the user and how we allow the user to change/update data. We need to develop a 
+single source of truth for profile information and data.
+
+</Section>
+<br />
+<br />
+
+<Section title="Process">
+
+## The Centralization Initiative
+
+I followed the double diamond product design process. This project in particular, for Wave, was more 
+situated in the Discovery and Definition phases. It required a lot of structuring, exploration, and planning for what 
+was going to be a extensive and complex Design and Delivery process.
+
+<Image src="designprocess_cp.png" />
+<Image src="discovery_cp.png" />
+
+
+
+**Why is this important?** <br />
+Centralization is a **process** -- moving from a distributed, unconnected, and repetitive assets and activities 
+to a singular, central, consistent, and re-usable resources.
+
+<br />
+
+## Intended Outcome
+
+The outcome of the centralization program will be a **scalable business platform** that:
+* supports risk, operations, and customer success specialists, and
+* enables Product, Marketing, and Wave engineers,
+to deliver effortless, connected products and experiences to Wave customers.
+
+
+</Section>
+
+<br />
+<br />
+
+<Section title="Discovery">
+
+
+
+## Audit
+An audit is the basis for how we are going to build the toolkit and experience design. This works as an audit 
+of the existing ecosystem.
+
+
+
+<Image src="audit_cp.png" />
+<br />
+
+## Wave Ecosystem
+What does the Wave ecosystem look like in general and how does centralization fit in?
+<br />
+<br />
+<Image src="wave-ecosystem.png" />
+
+**What does success look like for the audit?** <br />
+* Development of a modular hierarchy and how it corresponds to components in Bouyant 
+* Development of a naming convention for the modular system
+* Audit of the existing ecosystem of application/sign up flow
+
+
+
+<br />
+This is a general idea of what the ecosystem audit looks like. I reviewed each question Wave asks the 
+user during each application flow. I created user flows and sorted these questions into categories for 
+clarification. 
+<br />
+<br />
+<Image src="ecosystemaudit.png" />
+<Image src="ecosystem-audit.png" />
+
+## Translating the Audit into Something Modular
+So we have all of this information from looking at the onboarding flows and the existing user data. How do I translate 
+these elements into a *modular* system. 
+
+<Image src="modularsystem.png" />
+
+<Image src="modularsystem2.png" />
+
+These units will be the building blocks of the modular toolkit that will help us build the future of 
+onboarding and the user profile at Wave. 
+
+
+<br />
+<br />
+
+## Toolkit Development
+<Image src="toolkit_cp.png" />
+
+With the audit of the current state of the Wave ecosystem. I could then use the output of the audit to then start 
+developing the modular components of the toolkit. The **final version of toolkit will be deduped and simplified**. 
+It will serve as **the building blocks of the future onboarding flows and user profile**. 
+
+<Image src="toolkitrevised.png" />
+
+## Alright that looks complicated...
+What's the next step? With these components (the middle column), we can combine them in a logical way to develop 'modular plugins'.
+<br />
+<br />
+<br />
+
+</Section>
+
+
+<Section title="Define">
+
+## Toolkit Documentation
+<Image src="toolkitdoc_cp.png" />
+<br />
+
+**What are modular plugins again?**
+Modular plugins are combinations of components or plugins that will be able to be repeatable across the ecosystem. 
+<br />
+
+
+<Image src="modulartoolkit.png" />
+
+We will use these elements to start to **redevelop the structure of application sign up and the central profile**.
+
+<br />
+<br />
+
+## Experience Vision
+<Image src="experience_cp.png" />
+For the experience vision phase of the Centralization initiative, I needed to consider the wider user experience of the Wave ecosystem before jumping into redeveloping
+the user application flows.
+<br />
+<br />
+A huge goal of this initiative is to develop a centralized profile and a distributed system application flows. The central profile will house all user-related Information, but
+all of that user data is acquired through a series of distributed applcation flows. 
+<br />
+<br />
+
+## Design Principles
+
+<Image src="designprinciples.png" />
+
+The design principles for product design at Wave guide every feature we create. Centralization heavily draws from the empowering, tailored, 
+and contextual principles. The centralization intiative aims to empower users on their journey through the ecosystem by onboarding them to 
+different parts of the app in a logical and contextual way. In doing so, we will be able to surface their user data in a contextual way and 
+be transparent when the user needs to update or manage their own information.
+<br />
+<br />
+
+## User Journey
+When thinking about the impact that centralization will have on the Wave ecosystem and the experience design overall, we need to thinking 
+about the user journey as it exists today. 
+
+<Image src="userjourneycentralization.png" />
+<br />
+<br />
+
+## Information Architecture
+Now think back to the audit...if we were to visualize the information from the audit using the modular plugins, it allows us to **easily 
+see the overlaps of information that users are asked in each onboarding flow**.
+
+<Image src="iacurrentstate.png" />
+
+**What will this lead to?** If you look at all of those orangey-red rectangles, you can see the repetition in the ecosystem. That's a huge problem for users.
+<br />
+Instead, we can cut all of that repetition out and starting to build streamlined application flows. With this user data we can also configure a central profile. 
+
+<Image src="futurestateia.png" />
+
+</Section>
+
+<br />
+<br />
+
+<Section title="Design">
+
+## Wireframes
+
+The first round of prototyping was to outline the order and structure of the user application flow for the Wave ecosystem. This was based off of the future 
+state information architecture that detailed the user journey through the application flows for each Wave application. It identifies how user data acquisition throughout 
+the application flows will be distributed across the various apps. 
+
+The prototypes were developed from a mobile-first perspective because a huge initative at the time at Wave was to launch the new Wave mobile application. 
+<Image src="cp-signin.png" />
+<Image src="cp-newaccount.png" />
+<Image src="cp-businessdetails.png" />
+
+## Prototypes
+
+After receiving feedback from the team regarding these wireframes. I began developing prototypes to make the concept of a centralized user application 
+experience really come to life. These prototypes now feature the Wave brand-refresh, so they have a different look and feel than the previous wireframes. 
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="1000" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FossJXlxNrloclOwLuENtmo%2FWave-portfolio%3Fpage-id%3D95%253A55067%26node-id%3D95%253A55380%26viewport%3D241%252C48%252C0.59%26scaling%3Dmin-zoom%26starting-point-node-id%3D95%253A55380" allowfullscreen></iframe>
+
+<br />
+<br />
+
+## What's Next?
+
+The Central Profile Initiative was unfortunately deprioritzed and descoped during my time at Wave HQ. The initial steps to lay the engineering groundwork is 
+starting in January 2022. My work thus far will be used a the template to move forward when the initiative is revisited in 2022-2023.  
+
+
+</Section>
+
+<br />
+<br />
+
