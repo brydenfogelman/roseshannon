@@ -8,7 +8,10 @@ image: "ipcover.png"
 order: 2
 ---
 
-import video from "../../assets/videos/invoicecreate.mp4";
+import invoicecreate from "../../assets/videos/invoicecreate.mp4";
+import fullprototype from "../../assets/videos/fullprototype.mp4";
+import recordpayment from "../../assets/videos/recordpayment.mp4";
+import sendinvoice from "../../assets/videos/sendinvoice.mp4";
 
 <h1>{props.pageContext.frontmatter.title}</h1>
 <Subheader>{props.pageContext.frontmatter.subheader}</Subheader>
@@ -119,7 +122,7 @@ a deposit to my invoice and indicate to my customer the amount they need to pay 
 <Image src="invoicecreate.png" />
 
 <video controls style="width: 100%;" autoplay loop >
-    <source src={video} type="video/mp4" />
+    <source src={argoprototype} type="video/mp4" />
 </video>
 
 We also want to give business owners the opportunity to save these deposit setting and apply them to all future invoice. I added the ability for these
@@ -140,6 +143,10 @@ The BO needs to
 <br />
 <br />
 
+<video controls style="width: 100%;" autoplay loop >
+    <source src={sendinvoice} type="video/mp4" />
+</video>
+
 ## Viewing an Invoice as a Customer
 As a customer, I need to understand from a quick glance that I owe a deposit 
 * Copy revision for greater clarification
@@ -147,6 +154,8 @@ As a customer, I need to understand from a quick glance that I owe a deposit
  <br />
 
 <Image src="invoicesend.png" />
+
+
 
 <br />
 <br />
@@ -164,7 +173,9 @@ As a customer, I need to understand from a quick glance that I owe a deposit
 **User Story** -  Add customer credit to the summary banner. Include deposit amount and status in the invoice list table.
 <Image src="paymenthistory.png" />
 
-
+<video controls style="width: 100%;" autoplay loop >
+    <source src={recordpayment} type="video/mp4" />
+</video>
 
 </Section>
 
@@ -189,7 +200,9 @@ As a customer, I need to understand from a quick glance that I owe a deposit
 
 </Section>
 
-
+<video controls="false" style="width: 100%;" autoplay loop >
+    <source src={fullprototype} type="video/mp4" />
+</video>
 
 <br />
 <br />
