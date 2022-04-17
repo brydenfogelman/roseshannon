@@ -1,11 +1,11 @@
 ---
-title: "Central Profile"
+title: "Central Profile + Onboarding"
 subheader: July 2021 - December 2021
-description: Develop a single source of truth for profile information and data for users at Wave HQ. 
+description: Develop a single source of truth for profile information and data for users at Wave. 
 path: /design/central-profile
 date: 2019-01-29
 image: "centralization-cover.png"
-order: 1
+order: 2
 ---
 
 import argo from "../../assets/videos/argo.mp4";
@@ -26,18 +26,20 @@ import argo from "../../assets/videos/argo.mp4";
 <Section title="Overview">
 
 ## Summary
-Each product in the Wave Apps ecosystem asks the same profile questions over and over again. At Wave, we don't 
-recognize the same user while they move through the ecosystem. We treat each customer as if it's their first time. 
-It's tedious and repetitive for the user and it causes us to have duplicative and redundant data. This data is difficult 
-to manage and hard to reconcile. It prevents us from having a smart system with context and personalization.
+Onboarding at Wave spans a lot of teams, so understandably the holistic user experience was clunky, repetitive, and disjointed. Each product in the Wave Apps ecosystem asks the same profile questions over and over again. At Wave, we don't recognize the same user while they move through the ecosystem. We treat each customer as if it's their first time.
+It's tedious and repetitive for the user and it causes us to have duplicative and redundant data. On the side of the product teams, this data is difficult to manage and hard to reconcile. It prevents us from having a smart system with context and personalization.
 
 <br />
 <br />
 
 ## Design Goal
-Centralizating how Wave captures user information and data into a 'user profile'. Along with this, we also intend 
-to centralize how we expose data to the user and how we allow the user to change/update data. We need to develop a 
-single source of truth for profile information and data.
+Onboarding is complicated. The products available at Wave can be overwhelming especially if you are a new user signing up for the first time. The best form of onboarding is like a white glove service, where you’re really holding your user’s hand letting them new features based on their needs and intentions. Onboarding is also not just one flow. It happens over the users' lifetime with the app and it happens continuously. How do we empower different product teams to input and own their on onboarding flows for their part of the product while still having a cohesive onboarding experience for Wave. How might this design solution serve as a single source of truth for the user and their information?
+<br />
+
+## Intended Outcome
+The outcome of the centralization program will be a ** scalable user profile and onboarding library ** that:
+* enables Product, Marketing, and Wave engineers,
+* supports risk, operations, and customer success specialists to deliver effortless, connected products and experiences to Wave customers.
 
 </Section>
 <br />
@@ -45,30 +47,13 @@ single source of truth for profile information and data.
 
 <Section title="Process">
 
-## The Centralization Initiative
+## Process
 
 I followed the double diamond product design process. This project in particular, for Wave, was more 
 situated in the Discovery and Definition phases. It required a lot of structuring, exploration, and planning for what 
 was going to be a extensive and complex Design and Delivery process.
 
-<Image src="designprocess_cp.png" />
-<Image src="discovery_cp.png" />
-
-
-
-**Why is this important?** <br />
-Centralization is a **process** -- moving from a distributed, unconnected, and repetitive assets and activities 
-to a singular, central, consistent, and re-usable resources.
-
-<br />
-
-## Intended Outcome
-
-The outcome of the centralization program will be a **scalable business platform** that:
-* supports risk, operations, and customer success specialists, and
-* enables Product, Marketing, and Wave engineers,
-to deliver effortless, connected products and experiences to Wave customers.
-
+<Image src="mobilepaymentsprocess.png" />
 
 </Section>
 
@@ -80,64 +65,22 @@ to deliver effortless, connected products and experiences to Wave customers.
 
 
 
-## Audit
-An audit is the basis for how we are going to build the toolkit and experience design. This works as an audit 
-of the existing ecosystem.
-
-
-
-<Image src="audit_cp.png" />
-<br />
-
-## Wave Ecosystem
-What does the Wave ecosystem look like in general and how does centralization fit in?
-<br />
-<br />
+## Wave's Ecosystem of Products
+Below is a visual representation of how Wave's products (Invoicing, Payments, Payroll, Accounting, Wave Money, Wave Advising) all relate to one another and interconnect via streams of data and/or money. 
 <Image src="wave-ecosystem.png" />
 
-**What does success look like for the audit?** <br />
-* Development of a modular hierarchy and how it corresponds to components in Bouyant 
-* Development of a naming convention for the modular system
-* Audit of the existing ecosystem of application/sign up flow
-
-
-
 <br />
-This is a general idea of what the ecosystem audit looks like. I reviewed each question Wave asks the 
-user during each application flow. I created user flows and sorted these questions into categories for 
-clarification. 
 <br />
+
+## Audit
+How to build a modular onboarding process, I needed to first understand what the experience was currently like for the user. 
+An audit is the basis for how we are going to build the toolkit and experience design. This works as an audit 
+of the existing ecosystem. I reviewed each question Wave asks the user during each application flow. I created user flows and sorted these questions into categories for clarification.
+
 <br />
 <Image src="ecosystemaudit.png" />
 <Image src="ecosystem-audit.png" />
 
-## Translating the Audit into Something Modular
-So we have all of this information from looking at the onboarding flows and the existing user data. How do I translate 
-these elements into a *modular* system. 
-
-<Image src="modularsystem.png" />
-
-<Image src="modularsystem2.png" />
-
-These units will be the building blocks of the modular toolkit that will help us build the future of 
-onboarding and the user profile at Wave. 
-
-
-<br />
-<br />
-
-## Toolkit Development
-<Image src="toolkit_cp.png" />
-
-With the audit of the current state of the Wave ecosystem. I could then use the output of the audit to then start 
-developing the modular components of the toolkit. The **final version of toolkit will be deduped and simplified**. 
-It will serve as **the building blocks of the future onboarding flows and user profile**. 
-
-<Image src="toolkitrevised.png" />
-
-## Alright that looks complicated...
-What's the next step? With these components (the middle column), we can combine them in a logical way to develop 'modular plugins'.
-<br />
 <br />
 <br />
 
@@ -146,33 +89,49 @@ What's the next step? With these components (the middle column), we can combine 
 
 <Section title="Define">
 
-## Toolkit Documentation
-<Image src="toolkitdoc_cp.png" />
-<br />
+## User Journey
+When thinking about the impact that centralization will have on the Wave ecosystem and the experience design overall, we need to thinking 
+about the user journey as it exists today. 
 
-**What are modular plugins again?**
-Modular plugins are combinations of components or plugins that will be able to be repeatable across the ecosystem. 
-<br />
-
-
-<Image src="modulartoolkit.png" />
-
-We will use these elements to start to **redevelop the structure of application sign up and the central profile**.
-
+<Image src="userjourneycentralization.png" />
 <br />
 <br />
 
-## Experience Vision
-<Image src="experience_cp.png" />
-For the experience vision phase of the Centralization initiative, I needed to consider the wider user experience of the Wave ecosystem before jumping into redeveloping
-the user application flows.
+## Information Architecture
+Now think back to the audit...if we were to visualize the information from the audit modularly, it allows us to easily 
+see the overlaps of information that users are asked in each onboarding flow.
+
+<Image src="iacurrentstate.png" />
+
+The orange rectangles represent areas of overlap in the current information architecture. That's a huge problem for users. We can cut all of that repetition out and starting to build streamlined application flows. With this user data we can also configure a user profile. 
+<br />
+
+<Image src="futurestateia.png" />
 <br />
 <br />
-A huge goal of this initiative is to develop a centralized profile and a distributed system application flows. The central profile will house all user-related Information, but
-all of that user data is acquired through a series of distributed applcation flows. 
+
+## Modular, Flexible Onboarding
+As I audited the existing onboarding experiences that were present throughout Wave, I began to categorize them, chunk them, and then organize them into bite-sized onboarding steps. These bite-sized steps are contained within a page, which are contained within flows, which are designed to get users to **see value and be prepared regarding a certain topic, without overwhelming them**.
+<br />
+I also leaned heavily into this idea of a flexible onboarding process. If a user starts onboarding at product A, how might that impact their onboarding of product B, or product C? So the onboarding experience can adapt given the user’s previous experience in Wave. 
 <br />
 <br />
+<Image src="onboardingflow1.png" />
+
+What is beneficial about this modular model is that we can easily replace onboarding steps with others, or group them based on their product category. This allows for **tailored** onboarding flows specific to the customers' need and situation. 
 <br />
+<Image src="onboardingflow2.png" />
+<br />
+<br />
+
+## Central Profile
+The central user profile would be the hub for the user to manage, update, and edit their personal information that is acquired through each onboarding flow. They would also be able to see upcoming and past completed onboarding flows for the Wave ecosystem. 
+<br />
+<Image src="userprofile.png" />
+<br />
+<br />
+
+
 
 ## Design Principles
 
@@ -185,25 +144,7 @@ be transparent when the user needs to update or manage their own information.
 <br />
 <br />
 
-## User Journey
-When thinking about the impact that centralization will have on the Wave ecosystem and the experience design overall, we need to thinking 
-about the user journey as it exists today. 
 
-<Image src="userjourneycentralization.png" />
-<br />
-<br />
-
-## Information Architecture
-Now think back to the audit...if we were to visualize the information from the audit using the modular plugins, it allows us to **easily 
-see the overlaps of information that users are asked in each onboarding flow**.
-
-<Image src="iacurrentstate.png" />
-
-**What will this lead to?** If you look at all of those orangey-red rectangles, you can see the repetition in the ecosystem. That's a huge problem for users.
-<br />
-Instead, we can cut all of that repetition out and starting to build streamlined application flows. With this user data we can also configure a central profile. 
-
-<Image src="futurestateia.png" />
 
 </Section>
 
@@ -211,6 +152,27 @@ Instead, we can cut all of that repetition out and starting to build streamlined
 <br />
 
 <Section title="Design">
+
+## Onboarding Design System
+Having a designated set of design components for onboarding steps offers a cohesive experience across all of Wave. It also sets up separate product teams for success when working individually since they can all turn to a single design system. 
+These design system components will be the building blocks of the future onboarding flows and the user profile at Wave.
+<br />
+<br />
+<Image src="signinfields.png" />
+<br />
+<Image src="passwordfields.png" />
+<br />
+<Image src="inputfields.png" />
+
+<br />
+<br />
+
+## Design Documentation
+Along with the onboarding design system. I also created detailed design system documentation to help guide any future design or product team when they go to design a future onboarding flow. I also created templates and guiding principles for further clarification. This allows Wave onboarding to be scalable and tailored to future user needs. 
+<br />
+<Image src="guidelines.png" />
+<br />
+<br />
 
 ## Wireframes
 
@@ -223,9 +185,15 @@ The prototypes were developed from a mobile-first perspective because a huge ini
 <Image src="cp-newaccount.png" />
 <Image src="cp-businessdetails.png" />
 
+</Section>
+<br />
+<br />
+
+<Section title="Testing">
+
 ## Prototypes
 
-After receiving feedback from the team regarding these wireframes. I began developing prototypes to make the concept of a centralized user application 
+After receiving feedback from the team regarding these wireframes. I began developing prototypes to make the initial mobile onboarding experience
 experience really come to life. These prototypes now feature the Wave brand-refresh, so they have a different look and feel than the previous wireframes. 
 
 <video controls style="width: 100%;" autoplay loop >
@@ -238,7 +206,7 @@ experience really come to life. These prototypes now feature the Wave brand-refr
 
 ## What's Next?
 
-The Central Profile Initiative was unfortunately deprioritzed and descoped during my time at Wave HQ. The initial steps to lay the engineering groundwork is 
+The Central Profile Initiative was unfortunately deprioritzed and descoped during my time at Wave. The initial steps to lay the engineering groundwork is 
 starting in January 2022. My work thus far will be used a the template to move forward when the initiative is revisited in 2022-2023.  
 
 
