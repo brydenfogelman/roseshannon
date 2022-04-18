@@ -28,7 +28,8 @@ import payouts from "../../assets/videos/payouts.mp4";
 ## Summary
 The architecture and design of Wave's Payments on mobile is a high priority because Wave's Payments product represents a huge revenue source for the company. Wave has approximately 69K active **paying** business, of which 80% use the Payments product. As Wave's product teams worked toward a new, unified mobile app, the strategy to transport Payments to mobile was of upmost importance. 
 
-[See prototypes in Figma](https://www.figma.com/proto/TXTuhFAmXf5N2GVWkug2iV/Argo-Payments?page-id=72%3A23248&node-id=121%3A39842&viewport=300%2C48%2C0.35&scaling=min-zoom&starting-point-node-id=118%3A35674) 
+[See Payments prototypes in Figma](https://www.figma.com/proto/TXTuhFAmXf5N2GVWkug2iV/Argo-Payments?page-id=126%3A36710&node-id=272%3A70179&viewport=357%2C48%2C0.3&scaling=min-zoom&starting-point-node-id=126%3A42340)<br />
+[See Payouts prototypes in Figma](https://www.figma.com/proto/TXTuhFAmXf5N2GVWkug2iV/Argo-Payments?page-id=72%3A23248&node-id=118%3A35674&viewport=357%2C48%2C0.04&scaling=min-zoom&starting-point-node-id=118%3A35674&show-proto-sidebar=1) 
 
 
 <br />
@@ -139,42 +140,67 @@ be transparent when the user needs to update or manage their own information.}}}
 
 <Section title="Design">
 
-## Prototypes
-
-<video controls style="width: 100%;" autoplay loop >
-    <source src={payouts} type="video/mp4" />
-</video>
-
-After receiving feedback from the team regarding these wireframes. I began developing prototypes to make the concept of a centralized user application 
-experience really come to life. These prototypes now feature the Wave brand-refresh, so they have a different look and feel than the previous wireframes.    
-
-<br />
-<br />
-
 ## Payments
 
-The first round of prototyping was to outline the order and structure of the user application flow for the Wave ecosystem. This was based off of the future 
-state information architecture that detailed the user journey through the application flows for each Wave application. It identifies how user data acquisition throughout 
-the application flows will be distributed across the various apps. 
+The alpha launch of the unified mobile app will only feature a status page for the user to indicate to them their progress through the Payments onboarding. The Payments team decided to keep the Payments tab in the bottom navigation for increased discovery of the Payments product, as well as allowing users easier accessibility to Instant Payouts. If a user has successfully completed Payments onboarding, the value proposition within the Payments bottom navigation is within Payouts. However, if the user hasn't completed Payments onboarding, they'll be given the opportunity to start where they left off, or start the onboarding process from the beginning. 
 
-The prototypes were developed from a mobile-first perspective because a huge initative at the time at Wave was to launch the new Wave mobile application. 
+<br />
 <Image src="status.png" />
 
-## Payouts
-The first round of prototyping was to outline the order and structure of the user application flow for the Wave ecosystem. This was based off of the future 
-state information architecture that detailed the user journey through the application flows for each Wave application. It identifies how user data acquisition throughout 
-the application flows will be distributed across the various apps. 
+<br />
 
-The prototypes were developed from a mobile-first perspective because a huge initative at the time at Wave was to launch the new Wave mobile application. 
+Post V1, the design of the Payments flow required the development of a lot of unique components, shown below. These components interact together to create complex flows including:
+* Processing a refund on a payment
+* Deleting a payment
+* Sending a receipt on a payment
+* Editing a payment details
+* Filtering or sorting the payment list
+
+<br />
+
+<Image src="paymentscomponents.png" />
+<br />
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="850" height="900" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTXTuhFAmXf5N2GVWkug2iV%2FArgo-Payments%3Fpage-id%3D126%253A36710%26node-id%3D272%253A70179%26viewport%3D357%252C48%252C0.3%26scaling%3Dmin-zoom%26starting-point-node-id%3D286%253A61147%26show-proto-sidebar%3D1" allowfullscreen></iframe>
+
+<br />
+<br />
+
+
+
+
+## Payouts
+The prototyped flows show the user flow for Instant Payouts. This flow shows the following features:
+* Onboarding for Instant Payouts
+* Adding a debit card and bank account
+* Adjusting an Instant Payout amount
+* Doing an Instant Payout
+* A successful and an unsuccessful Instant Payout
+
+<br />
+<br />
+
+The design of these features were based off of the initial user research we conducted and therefore we prioritized the ability for users to 1. View their Instant Payout availability, 2. Onboard for Instant Payouts, and 3. Process an Instant Payout to their debit card. 
+<br />
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="850" height="900" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTXTuhFAmXf5N2GVWkug2iV%2FArgo-Payments%3Fpage-id%3D72%253A23248%26node-id%3D118%253A35674%26viewport%3D357%252C48%252C0.04%26scaling%3Dmin-zoom%26starting-point-node-id%3D118%253A35674%26show-proto-sidebar%3D1" allowfullscreen></iframe>
+
+<br />
+<br />
+
+Following the Alpha launch of the unified mobile app, the next design priority is the **Payout List** and **Payout Detail View**. I prototyped the user flow to show the proposed user interaction with those components and screens. 
+
+<br />
 
 <Image src="payout1.png" />
 <Image src="payout2.png" />
+
+<br />
 <br />
 
 ## Payments Onboarding
-The first round of prototyping was to outline the order and structure of the user application flow for the Wave ecosystem. This was based off of the future 
-state information architecture that detailed the user journey through the application flows for each Wave application. It identifies how user data acquisition throughout 
-the application flows will be distributed across the various apps. 
+The Payments onboarding process overall is quick enough for the user to get excited about the Payments features, yet effective in acquiring adequate user information to ensure user security. The user is able to begin Payments onboarding when they first sign up for the Wave application. They can abandon onboarding at any point, and they will have the opportunity to come back to the onboarding process while having their progress saved. 
+<br />
 
 <Image src="onboarding1.png" />
 <Image src="onboarding2.png" />
@@ -207,10 +233,14 @@ I also conducted a separate design review with my supervising Product Manager an
 
 Due to constrained development timelines, the team's ability to user test the Payments and Payouts flows with users of Wave and the general public is limited. We were instead able to user test these flows with internal users that have access to the alpha test of the unified mobile app. The usability testing we devised involved the following:
 
+<br />
 <Image src="usabilitytesting.png" />
+<br />
 
 We are currently testing with internal Wave users and will iterate on design to accomodate user feedback prior to Alpha launch in June. 
 
+<br />
+<br />
 <br />
 <br />
 
