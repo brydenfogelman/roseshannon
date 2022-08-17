@@ -10,7 +10,7 @@ order: 1
 
 import payouts from "../../assets/videos/payouts.mp4";
 import payments from "../../assets/videos/payments.mp4";
-import status from "../../assets/videos/status.mp4";
+import argopaymentsnew from "../../assets/videos/argopaymentsnew.mp4";
 
 <h1>{props.pageContext.frontmatter.title}</h1>
 <Subheader>{props.pageContext.frontmatter.subheader}</Subheader>
@@ -28,17 +28,16 @@ import status from "../../assets/videos/status.mp4";
 <Section title="Overview">
 
 ## Summary
-The architecture and design of Wave's Payments on mobile is a high priority because Wave's Payments product represents a huge revenue source for the company. Wave has approximately 69K active **paying** business, of which 80% use the Payments product. As Wave's product teams worked toward a new, unified mobile app, the strategy to transport Payments to mobile was of upmost importance. 
+Payments, Wave's highest revenue generating product, isn't available on Wave's current mobile offering. Approximately **80% of Wave's active paying businesses** are using Payments. This means that approximately 55,000 business owners using Wave are being underserved on mobile.
 
-[See Payments prototypes in Figma](https://www.figma.com/proto/TXTuhFAmXf5N2GVWkug2iV/Argo-Payments?page-id=72%3A23248&node-id=121%3A39842&viewport=357%2C48%2C0.04&scaling=min-zoom&starting-point-node-id=118%3A35674)<br />
-[See Payouts prototypes in Figma](https://www.figma.com/proto/TXTuhFAmXf5N2GVWkug2iV/Argo-Payments?page-id=72%3A23248&node-id=121%3A39842&viewport=357%2C48%2C0.04&scaling=min-zoom&starting-point-node-id=118%3A35674) 
+[See final prototype in Figma](https://www.figma.com/proto/fGYJ6NVfGNQOvwJEt88rHY/Argo-Payments3?page-id=10849%3A132333&node-id=10850%3A133121&viewport=4392%2C573%2C0.23&scaling=scale-down&starting-point-node-id=10850%3A132748)<br />
 
 
 <br />
 <br />
 
 ## Design Goal
-The goal for Payments on mobile was to decide which features of Payments to pursue and/or how to evolve concepts to best meet business owners' needs. 
+The goal for this project is decide which elements of the existing Payments product to pursue and/or how to evolve concepts to best meet business owners' needs on mobile. 
 
 
 </Section>
@@ -60,8 +59,6 @@ Designing and developing the **unified mobile app** (code name: ARGO) was a key 
 
 <br />
 
-The North Star for the mobile experience is to deliver an integrated, world-class mobile product, in service of Wave's strategic outcome to deliver on the Wave ecosystem.
-
 
 
 </Section>
@@ -74,33 +71,25 @@ The North Star for the mobile experience is to deliver an integrated, world-clas
 
 
 
-## Persona
-Who are we talking about when we say our 'target user' for the unified mobile app? 
+## User Research
+Before designing a mobile experience of Wave's Payments product, I needed to answer a few key research questions to better understand the user needs of the business owners I would be designing for. We conducted research in order to inform our holistic understanding of where, when, and why mobile apps are used in our target users' business practices. My key research questions and insights are as follows:
+<br />
+<Image src="researchquestion1.png" />
 
-<Image src="SIB.png" />
+<Image src="insights1.png" />
 
-<br />
-<br />
-
-## Mobile Context of Use
-We conducted research in order to inform our holistic understanding of **where, when, and why mobile apps are used in our target users' business practices**.
-<br />
-<Image src="payments-insights.png" />
-<br />
-<Image src="insight1.png" />
-<br />
-<Image src="insight2.png" />
 <br />
 
-## Payments
-Beyond understanding how the SIBs use their mobile device to meet the needs of their business practice, we needed to specifically understand how their **payments-related needs** change when moving across platforms. 
+<Image src="researchquestion2.png" />
 
-<Image src="payments-uq.png" />
-<Image src="payments-uq2.png" />
-<Image src="paymentinsight2.png" />
+<Image src="insights2.png" />
+
 <br />
-<Image src="paymentinsight1.png" />
 
+## What is the current user experience of Payments with Wave?
+Wave users currently receive **payments** from their customers which arrive to their Wave account. Wave then releases these funds daily via **payouts** which arrive to the Wave users' bank account that they have previously connected to their Wave account.
+
+<Image src="paymentdiagram.png" />
 
 <br />
 <br />
@@ -112,17 +101,22 @@ Beyond understanding how the SIBs use their mobile device to meet the needs of t
 
 <Section title="Define">
 
-## Mobile Site Map
-I developed a site map for the Payments section of the Wave mobile app (ARGO) so that the mobile team to have greater clarity when discussing the design of certain features, how they connect and relate to one another, and what screens are prioritized for V1. 
+## Initial Proposed Solution
+The initial solution that I proposed to integrate the Payments product to the mobile offering, was to have all of the Payments features be dedicated to one Payments tab in the bottom navigation. Within this Payments tab, there would be further navigation between Payments and Payouts. This solution closely emulated the existing experience on the web and it neatly divided the two types of money transfers. 
 <br />
 <br />
-<Image src="argo-sitemap.png" />
+<Image src="initialsolution.png" />
 
-Specifically looking at the portion of the mobile site-map dedicated to Payments, what we can see is that payments is made up of two main screens: **Payments + Payouts**. 
-<Image src="psitemap.png" />
+After initial concept testing with users and receiving design feedback, we recognized that there were issues that needed to be addressed with this approach. 
+<br />
+The sub-navigation using the tabs within the bottom navigation was causing confusion. We noticed that the overall structure was pulling a lot of inspiration from the web experiene and we wanted to tested our assumption if we needed to continue with that approach.
 
-The details of the initial design of Payments and Payouts involve similar features. Primarily, users need to be able to **view the status past payments, take quick, vital actions related to payments and pay themselves quickly through instant payouts**. These design choices directly map back to the user research insights that we ascertained through the user interviews. 
-<Image src="paymentsvpayouts.png" />
+<br />
+<br />
+
+## Sitemap Revision
+I took a look at the information architecture of the Payments tab on mobile to see I could reduce some of the horizontal navigation. I found that by introducing a **unifying Payments and Payouts dashboard** I was able to reduce a lot of confusing navigation, visual clutter, and could overall make the user experience simpler. 
+<Image src="sitemaprevision.png" />
 
 <br />
 
@@ -141,89 +135,34 @@ and transparent principles**. When offering Payments, we want the user to feel e
 
 <Section title="Design">
 
-## Payments
+##Dashboard
 
-The alpha launch of the unified mobile app will only feature a status page for the user to indicate to them their progress through the Payments onboarding. The Payments team decided to keep the Payments tab in the bottom navigation for increased discovery of the Payments product, as well as allowing users easier accessibility to Instant Payouts. If a user has successfully completed Payments onboarding, the value proposition within the Payments bottom navigation is within Payouts. However, if the user hasn't completed Payments onboarding, they'll be given the opportunity to start where they left off, or start the onboarding process from the beginning. 
-
-<video controls="false" style="width: 100%;" autoplay loop >
-    <source src={status} type="video/mp4" />
-</video>
-
-
-<br />
-<br />
-
-<Image src="status.png" />
-
-<br />
-
-Post V1, the design of the Payments flow required the development of a lot of unique components, shown below. These components interact together to create complex flows including:
-* Processing a refund on a payment
-* Deleting a payment
-* Sending a receipt on a payment
-* Editing a payment details
-* Filtering or sorting the payment list
-
-<br />
-<video controls="false" style="width: 100%;" autoplay loop >    
-    <source src={payments} type="video/mp4" />
-</video>
-
-<br />
-<br />
-<br />
-
-<Image src="paymentscomponents.png" />
-
-
-<br />
-<br />
-<br />
-
-## Payouts
-The prototyped flows show the user flow for Instant Payouts. This flow shows the following features:
-* Onboarding for Instant Payouts
-* Adding a debit card and bank account
-* Adjusting an Instant Payout amount
-* Doing an Instant Payout
-* A successful and an unsuccessful Instant Payout
-
-<br />
-<br />
-
-The design of these features were based off of the initial user research we conducted and therefore we prioritized the ability for users to 1. View their Instant Payout availability, 2. Onboard for Instant Payouts, and 3. Process an Instant Payout to their debit card. 
-<br />
-
+I decided to implement an all-in-one money dashboard. This allows the user to have a single view for their Payments and Payouts, all in the same place. We simplified the visual detail necessary to convey each unit of information so that the Payments dashboard felt easily navigable without being overwhelming. 
 
 <video controls="false" style="width: 100%;" autoplay loop >
-    <source src={payouts} type="video/mp4" />
+    <source src={argopaymentsnew} type="video/mp4" />
 </video>
 
 <br />
-<br />
 
-Following the Alpha launch of the unified mobile app, the next design priority is the **Payout List** and **Payout Detail View**. I prototyped the user flow to show the proposed user interaction with those components and screens. 
-
-<br />
-
-<Image src="payout1.png" />
-<Image src="payout2.png" />
+In this prototype, you can see the design of a few other user flows that were involved in this project that were required to bring the Payments product to mobile. These included:
+* Viewing a payment detail page
+* Viewing a payout detail page
+* Sending a receipt
+* Signing up for instant payouts and processing an instant payout
 
 <br />
 <br />
 
-## Payments Onboarding
-The Payments onboarding process overall is quick enough for the user to get excited about the Payments features, yet effective in acquiring adequate user information to ensure user security. The user is able to begin Payments onboarding when they first sign up for the Wave application. They can abandon onboarding at any point, and they will have the opportunity to come back to the onboarding process while having their progress saved. 
+##Initial Solution vs. Dashboard
+
+I went through three iterations over the course of 4 months. I refined the Payments and Payouts dashboard design from and initial version based off of user feedback and team critique that I received.
+
+<Image src="v1payments.png" />
+<Image src="v2payments.png" />
+<Image src="v3payments.png" />
 <br />
 
-<Image src="onboarding1.png" />
-<Image src="onboarding2.png" />
-<Image src="onboarding3.png" />
-<Image src="onboarding4.png" />
-<Image src="onboarding5.png" />
-<Image src="onboarding6.png" />
-<br />
-<br />
 
 </Section>
 
